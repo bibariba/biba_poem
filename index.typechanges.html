@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+        <title>A self-written poem.</title> 
+   
+   
+   <style type="text/css">
+
+html, body {
+    width:100%;
+    height:100%;
+    background-color:black;
+    color: white;
+}
+
+p {
+    font-family: "Times New Roman", Perpetua, Serif;
+    font-size: 52px;
+	font-style: normal;
+	/*font-weight: bold;*/
+	text-align: center;
+	letter-spacing: 0.035em;
+}
+
+
+   
+ </style> 
+ 
+ </head>
+    <body> 
+          <p id="years">I</p>
+          <p id="months"> think</p>    
+          <p id="days">you</p>
+          <p id="hours">mammals</p>
+          <p id="minutes">always</p>
+          <p id="seconds">snooze</p>
+      
+      <script type="text/javascript">
+
+        var seconds_counter = 0;
+   
+
+        // array seconds
+          var seconds = [
+              "snooze", 
+              "sleep", 
+              "scream", 
+              "wonder", 
+              "listen", 
+              "overachieve", 
+              "dream", 
+              "carbonate",
+              "blow up", 
+              "float", 
+              "tumble",
+              "dissappear",
+              "fail",
+              "hypernate",
+              "coordinate",
+              "experiment",
+              "forget",
+              "invent",
+              "grow",
+              "drink",
+              "play",
+              "suffer",
+              "obey",
+              "explore",
+              "erase",
+              "shave",
+              "disarrange",
+              "collect",
+              "hide",
+              "bounce",
+              ];
+              
+        // array minutes
+          var minutes = [
+              "always", 
+              "never", 
+              "sometimes", 
+              "would", 
+              "couldn't", 
+              "might", 
+              "often", 
+              "unfortunately",
+              "could", 
+              "should", 
+              "shouldn't",
+              "regularly",
+              "normally",
+              "positively",
+              "usually",
+              "regularly",
+              "occasionally",
+              "rarely",
+              "seldom",
+              ];
+              
+        // array hours
+          var hours = [
+              "mammals", 
+              "assholes", 
+              "punks", 
+              "virgos", 
+              "overachievers", 
+              "millenials", 
+              "designers", 
+              "artists",
+              "dreamers",
+              "mammas",
+              "friends",
+              "geniuses",
+              "inventors",
+              "mathematicians",
+              "painters",
+              "redheads",
+              "animals", 
+              "cuties", 
+              "mushrooms",
+              "Heelys",
+              "lovelies",
+              "haters",
+              "people",
+              "normies"
+              ];
+              
+              
+        // array months
+          var months = [
+              "think", 
+              "assume", 
+              "propose", 
+              "guess", 
+              "said", 
+              "heard", 
+              "thought",
+              "stopped",
+              "think",
+              "demand",
+              "overhead", 
+              "imagine", 
+              "said",
+              "claim",
+              "whispered",
+              "screamed",
+              "admit",
+              "know",
+              "believe"
+              ];
+              
+         // array years
+          var years = [
+              "I", 
+              "We", 
+              "They",
+              "Doctors",
+              "Scientists",
+              "Russians",
+              "Athletes",
+              "Unbelievers",
+              "Monsters",
+              "Teachers",
+              "Sheilas",
+              "Presidents",
+              "Roomates",
+              "Fries",
+              "Nurses",
+              "Statues",
+              "Astrologists",
+              "Apples",
+              "Manicurists",
+              "Princes",
+              "Bronies",
+              "Capricorns",
+              "Babies",
+              "Dogs",
+              "Carrots",
+              "Carnivores",
+              "Italians"
+              ];
+              
+         // display the second in the console      
+         console.log(seconds[0]);
+         // display random number
+        // console.log("I'm thinking of a number between 1 and 12: " + seconds[randomnumber]);
+         
+    
+    //seconds change
+    function seconds_change() {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * (30 - 0 + 1)) + 0;
+         console.log(seconds[randomnumber]);
+         $('#seconds').html(seconds[randomnumber]);
+    }
+    var second_interval = setInterval( seconds_change, 1000);
+    
+    //minutes change    
+    function minutes_change() {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * (16 - 0 + 1)) + 0;
+         console.log(minutes[randomnumber]);
+         $('#minutes').html(minutes[randomnumber]);
+    }
+    setInterval( minutes_change, 2000);
+    
+    
+    //hours change    
+    function hours_change() {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
+         console.log(hours[randomnumber]);
+         $('#hours').html(hours[randomnumber]);
+    }
+    setInterval( hours_change, 4000);
+    
+    
+      //months change    
+    function months_change() {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * (13 - 0 + 1)) + 0;
+         console.log(months[randomnumber]);
+         $('#months').html(months[randomnumber]);
+    }
+    setInterval( months_change, 5000);
+    
+       //years change    
+    function years_change() {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * (15 - 0 + 1)) + 0;
+         console.log(years[randomnumber]);
+         $('#years').html(years[randomnumber]);
+    }
+    setInterval( years_change, 50000);
+    
+    
+    
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </body> 
+</html>

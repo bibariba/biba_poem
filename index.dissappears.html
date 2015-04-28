@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+        <title>A self-written poem.</title> 
+   
+   
+   <style type="text/css">
+
+html, body {
+    width:100%;
+    height:100%;
+    background-color:black;
+    color: white;
+}
+
+p {
+    font-family: "Times New Roman", Perpetua, Serif;
+    font-size: 52px;
+	font-style: normal;
+	/*font-weight: bold;*/
+	text-align: center;
+	letter-spacing: 0.035em;
+}
+
+
+   
+ </style> 
+ 
+ </head>
+    <body> 
+          <p id="years">I</p>
+          <p id="months"> think</p>    
+          <p id="days">you</p>
+          <p id="hours">mammals</p>
+          <p id="minutes">always</p>
+          <p id="seconds">snooze</p>
+      
+      <script type="text/javascript">
+
+        var seconds_counter = 0;
+        var minutes_counter = 0;
+        var hours_counter = 0;
+        var months_counter = 0;
+        var years_counter = 0;
+   
+
+        // array seconds
+          var seconds = [
+              "snooze", 
+              "sleep", 
+              "scream", 
+              "wonder", 
+              "listen", 
+              "overachieve", 
+              "dream", 
+              "carbonate",
+              "blow up", 
+              "float", 
+              "tumble",
+              "dissappear",
+              "fail",
+              "hypernate",
+              "coordinate",
+              "experiment",
+              "forget",
+              "invent",
+              "grow",
+              "drink",
+              "play",
+              "suffer",
+              "obey",
+              "explore",
+              "erase",
+              "shave",
+              "disarrange",
+              "collect",
+              "hide",
+              "bounce",
+              ];
+              
+        // array minutes
+          var minutes = [
+              "always", 
+              "never", 
+              "sometimes", 
+              "would", 
+              "couldn't", 
+              "might", 
+              "often", 
+              "unfortunately",
+              "could", 
+              "should", 
+              "shouldn't",
+              "regularly",
+              "normally",
+              "positively",
+              "usually",
+              "regularly",
+              "occasionally",
+              "rarely",
+              "seldom",
+              ];
+              
+        // array hours
+          var hours = [
+              "mammals", 
+              "assholes", 
+              "punks", 
+              "virgos", 
+              "overachievers", 
+              "millenials", 
+              "designers", 
+              "artists",
+              "dreamers",
+              "mammas",
+              "friends",
+              "geniuses",
+              "inventors",
+              "mathematicians",
+              "painters",
+              "redheads",
+              "animals", 
+              "cuties", 
+              "mushrooms",
+              "Heelys",
+              "lovelies",
+              "haters",
+              "people",
+              "normies"
+              ];
+              
+              
+        // array months
+          var months = [
+              "think", 
+              "assume", 
+              "propose", 
+              "guess", 
+              "said", 
+              "heard", 
+              "thought",
+              "kick",
+              "stopped",
+              "think",
+              "demand",
+              "overhead", 
+              "imagine", 
+              "said",
+              "claim",
+              "whispered",
+              "screamed",
+              "admit",
+              "know",
+              "believe"
+              ];
+              
+        // array years
+          var years = [
+              "I", 
+              "We", 
+              "They",
+              "Doctors",
+              "Scientists",
+              "Russians",
+              "Athletes",
+              "Unbelievers",
+              "Monsters",
+              "Teachers",
+              "Sheilas",
+              "Presidents",
+              "Chicken Wings",
+              "Roomates",
+              "Fries",
+              "Nurses",
+              "Statues",
+              "Astrologists",
+              "Apples",
+              "Manicurists",
+              "Princes",
+              "Bronies",
+              "Capricorns",
+              "Babies",
+              "Dogs",
+              "Carrots",
+              "Carnivores",
+              "Italians"
+              ];
+              
+        var fonts = [
+             "Helvetica",
+             "Times New Roman",
+             "Monaco"
+            ];
+              
+         // display the second in the console      
+         //console.log(seconds[0]);
+         // display random number
+        // console.log("I'm thinking of a number between 1 and 12: " + seconds[randomnumber]);
+         
+    
+    //seconds change
+    function seconds_change() {
+         seconds_counter += 1;
+         if (seconds_counter > 50) {
+             $('#seconds').html('');
+             clearInterval(second_interval);
+         }
+         else {
+            // picking a random number between 0 and x
+             var randomnumber = Math.floor(Math.random() * seconds.length);
+             console.log(seconds[randomnumber]);
+             $('#seconds').html(seconds[randomnumber]);
+         }
+        changeFont();
+    }
+    var second_interval = setInterval( seconds_change, 500);
+    
+    //minutes change    
+    function minutes_change() {
+         minutes_counter += 1;
+         if (minutes_counter > 40) {
+             $('#minutes').html('');
+             clearInterval(minute_interval);
+         }
+         else {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * minutes.length);
+         //console.log(minutes[randomnumber]);
+         $('#minutes').html(minutes[randomnumber]);
+        }
+        changeFont();
+    }
+    var minute_interval = setInterval( minutes_change, 3000);
+    
+    //hours change    
+    function hours_change() {
+         hours_counter += 1;
+         if (hours_counter > 30) {
+             $('#hours').html('');
+             clearInterval(hour_interval);
+         }
+         else {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * hours.lenth);
+        // console.log(hours[randomnumber]);
+         $('#hours').html(hours[randomnumber]);
+         }
+        changeFont();
+    }
+    var hour_interval = setInterval( hours_change, 4000);
+    
+    
+      //months change    
+    function months_change() {
+         months_counter += 1;
+         if (months_counter > 20) {
+             $('#months').html('');
+             clearInterval(months_interval);
+         }
+         else {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * months.length);
+         //console.log(months[randomnumber]);
+         $('#months').html(months[randomnumber]);
+         }
+        changeFont();
+    }
+    var months_interval = setInterval( months_change, 6000);
+    
+       //years change    
+    function years_change() {
+         years_counter += 1;
+         if (years_counter > 10) {
+             //make it dissappear
+             $('#years').html('');
+             //make it stop displaying
+             clearInterval(years_interval);
+         }
+         else {
+        // picking a random number between 0 and x
+         var randomnumber = Math.floor(Math.random() * years.length);
+         
+         //console.log(years[randomnumber]);
+         $('#years').html(years[randomnumber]);
+         
+         }
+        changeFont();
+
+    }
+    var years_interval = setInterval( years_change, 1000);
+    
+    function changeFont() {
+        var randomfontindex = Math.floor(Math.random() * fonts.length);
+        $('p').css("font-family", fonts[randomfontindex]);
+        //console.log("years:"+years_counter+" months:"+months_counter+" hours:"+hours_counter+" minutes:"+minutes_counter+" seconds:"+seconds_counter);
+    }
+    
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </body> 
+</html>
